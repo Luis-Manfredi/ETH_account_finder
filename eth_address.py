@@ -11,4 +11,10 @@ for i in range(num+1):
         acct = Account.from_mnemonic(mnemonic, "", "m/44'/60'/{}'/0/{}".format(i, e))
         myAccount = acct.address
         print(myAccount)
-    print("==========================================")
+        
+    print("m/44'/60'/{}'/0/1".format(i) + "==========================")
+    for e in range(num+1):
+        acct = Account.from_mnemonic(mnemonic, "", "m/44'/60'/{}'/1/{}".format(i, e))
+        myAccount = acct.address
+        print(myAccount)
+    print()
